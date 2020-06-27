@@ -97,6 +97,20 @@ forge-dm list-objects --short
 forge-dm object-urn my-bucket-key my-object-key
 ```
 
+```powershell
+# List hubs
+forge-dm list-hubs
+
+# List Projects Ids
+forge-dm list-projects hub_id --short
+
+# List Top Folders in table
+forge-dm ltf hub_id project_id | ConvertFrom-Json | ft -Property name, id
+
+# list folder contents in table
+forge-dm li project_id folderId | ConvertFrom-Json | ft -Property name, id
+```
+
 #### Design Automation
 
 ```bash
